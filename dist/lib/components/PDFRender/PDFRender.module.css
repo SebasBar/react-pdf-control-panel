@@ -1,0 +1,155 @@
+.loader {
+  position: center;
+  flex-wrap: wrap;
+  top: 200;
+  left: 2000;
+  width: 1vh;
+  height: 1vw;
+}
+
+.pdfRender {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  height: 800px;
+}
+
+.pdfSection {
+  width: 700px;
+  height: 768px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #9c9797;
+}
+
+.controlPanel {
+  color: rgba(121, 121, 123, 1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #282828;
+}
+
+.controlPanelInt {
+  width: 700px;
+  height: 32px;
+  margin: auto;
+  color: #bcbcbc;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 12px;
+}
+
+.panelDiv {
+  margin: 0 2rem;
+}
+
+/* Media Queries Control Panel*/
+/* Smallest screen 320px to 640px  */
+@media screen and (max-width: 640px) {
+  .controlPanelInt {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2px;
+  }
+  .panelDiv {
+    margin: auto;
+  }
+  .element {
+    margin: 0 2px;
+    font-size: 11px;
+  }
+  .text {
+    font-size: 10px;
+  }
+  .hideIcon {
+    display: none;
+  }
+}
+/* .... Media Queries Control Panel */
+
+.docToPrint {
+  width: 50%;
+  height: 50%;
+}
+
+.element {
+  color: #bcbcbc;
+  margin: 0 0.4rem;
+}
+
+.element:hover {
+  color: #fcfcfc;
+}
+
+.text {
+  color: #bcbcbc;
+  font-size: 12px;
+}
+
+.pageNumber {
+  background-color: #3f3e3e;
+  size: 10px;
+  border-style: none;
+  text-align: center;
+  padding: 0 5px;
+}
+
+.inputZoom {
+  background-color: #282828;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.disable {
+  cursor: not-allowed;
+  color: #3f3e3e;
+}
+
+@page {
+  height: initial !important;
+  size: 106mm 155mm;
+  page: cover;
+  background-color: blue;
+  overflow: initial !important;
+  -webkit-print-color-adjust: exact;
+}
+
+/* @media print {
+  html,
+  body {
+    width: 215mm;
+    height: 279mm;
+  }
+
+  canvas {
+    display: none;
+  }
+} */
+
+/* @media print {
+  .page-break {
+    margin-top: 1rem;
+    display: block;
+    page-break-before: auto;
+  }
+} */
+
+/* Small screen 640px to 768px  */
+/* @media (min-width: 640px) and (max-width: 768px) {
+} */
+
+/* Medium screen 768px to 1024px  */
+/* @media (min-width: 768px) and (max-width: 1024px) {
+} */
+
+/* Large screen over 1024px */
